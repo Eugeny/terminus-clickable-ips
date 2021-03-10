@@ -1,0 +1,44 @@
+{
+  "name": "terminus-clickable-ips",
+  "version": "2.0.0",
+  "description": "Makes IPs and file paths clickable in Terminus",
+  "keywords": [
+    "terminus-plugin"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "webpack --progress --color",
+    "watch": "webpack --progress --color --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "GG4mida",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/animations": "^11.1.2",
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/forms": "^6.0.7",
+    "@angular/platform-browser": "^6.0.7",
+    "@ng-bootstrap/ng-bootstrap": "^2.2.0",
+    "@types/webpack-env": "^1.16.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "electron": "^12.0.0-beta.22",
+    "ng2-dnd": "5.0.2",
+    "ngx-toastr": "^8.8.0",
+    "rxjs": "^6.4.0",
+    "terminus-core": "^1.0.123-nightly.0",
+    "terminus-terminal": "^1.0.123-nightly.0",
+    "typescript": "^3.1.3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "winston": "^3.3.3"
+  },
+  "dependencies": {
+    "untildify": "^3.0.2"
+  },
+  "repository": "GG4mida/terminus-clickable-ips"
+}
