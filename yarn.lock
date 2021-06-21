@@ -1636,6 +1636,11 @@ homedir-polyfill@^1.0.1:
   dependencies:
     parse-passwd "^1.0.0"
 
+hterm-umdjs@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/hterm-umdjs/-/hterm-umdjs-1.4.1.tgz#0cd5352eaf927c70b83c36146cf2c2a281dba957"
+  integrity sha512-r5JOmdDK1bZCmp3cKcuGRLVeum33H+pzD119ZxmQou+QUVe6SAVSz03HvKWVhM2Ao1Biv+fkhFDmnsaRPq0tFg==
+
 http-cache-semantics@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz#49e91c5cbf36c9b94bcfcd71c23d5249ec74e390"
@@ -2470,6 +2475,14 @@ one-time@^1.0.0:
   dependencies:
     fn.name "1.x.x"
 
+opentype.js@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/opentype.js/-/opentype.js-1.3.3.tgz#65b8645b090a1ad444065b784d442fa19d1061f6"
+  integrity sha512-/qIY/+WnKGlPIIPhbeNjynfD2PO15G9lA/xqlX2bDH+4lc3Xz5GCQ68mqxj3DdUv6AJqCeaPvuAoH8mVL0zcuA==
+  dependencies:
+    string.prototype.codepointat "^0.2.1"
+    tiny-inflate "^1.0.3"
+
 os-browserify@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
@@ -3199,6 +3212,11 @@ string-width@^1.0.1:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
+string.prototype.codepointat@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/string.prototype.codepointat/-/string.prototype.codepointat-0.2.1.tgz#004ad44c8afc727527b108cd462b4d971cd469bc"
+  integrity sha512-2cBVCj6I4IOvEnjgO/hWqXjqBGsY+zwPmHl12Srk9IXSZ56Jwwmy+66XO5Iut/oQVR7t5ihYdLB0GMa4alEUcg==
+
 string_decoder@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.2.0.tgz#fe86e738b19544afe70469243b2a1ee9240eae8d"
@@ -3276,15 +3294,18 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-terminus-core@^1.0.123-nightly.0:
-  version "1.0.123-nightly.0"
-  resolved "https://registry.yarnpkg.com/terminus-core/-/terminus-core-1.0.123-nightly.0.tgz#c137aadbdaa0523f04815bacca91c91d43e4477b"
-  integrity sha512-eY/ieAgYmK98N3a2As7X0o2Zs4vxH7WTWgbrzzEdvQWi39llDI5scKPB/NMqcAN4jopO+5OS5ame7Hxu4fHwuQ==
+terminus-core@^1.0.140:
+  version "1.0.140"
+  resolved "https://registry.yarnpkg.com/terminus-core/-/terminus-core-1.0.140.tgz#4f1c8f5cdbf6c47bd659407d5f69ae783139d6dd"
+  integrity sha512-Q5A2G8B+Bro2V8b6dL7rfvlpB6F4kLzVlIDxHF5k/7LZzz7PvmKGCJeFO1DbukD5Nh9ORdNaTFUcuAispYOr1Q==
 
-terminus-terminal@^1.0.123-nightly.0:
-  version "1.0.123-nightly.0"
-  resolved "https://registry.yarnpkg.com/terminus-terminal/-/terminus-terminal-1.0.123-nightly.0.tgz#e5f904dfbf4713230c9ff8ab1e5d2301dd1f0f9c"
-  integrity sha512-QGKN3lgN8HMo1c0stoFq5/a+aA/QQm8Ix3Jp8b/Xd1iCpV8j6QenZ/aEultj92hiWIKi7hG+XxBQ+FTirBSP1A==
+terminus-terminal@^1.0.140:
+  version "1.0.140"
+  resolved "https://registry.yarnpkg.com/terminus-terminal/-/terminus-terminal-1.0.140.tgz#eb19fae27357760a6aa5ded5c5e4edbb6deb726d"
+  integrity sha512-fk5Ee/+AFOWwlezHjls53bneKEhWKi/ceLxC1U72piZoeoql2d4eO/+t1Kl+3XB70PCiIMb4aKZGn5y+p107aw==
+  dependencies:
+    hterm-umdjs "1.4.1"
+    opentype.js "^1.3.3"
 
 terser-webpack-plugin@^1.1.0:
   version "1.2.3"
@@ -3328,6 +3349,11 @@ timers-browserify@^2.0.4:
   integrity sha512-YvC1SV1XdOUaL6gx5CoGroT3Gu49pK9+TZ38ErPldOWW4j49GI1HKs9DV+KGq/w6y+LZ72W1c8cKz2vzY+qpzg==
   dependencies:
     setimmediate "^1.0.4"
+
+tiny-inflate@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-inflate/-/tiny-inflate-1.0.3.tgz#122715494913a1805166aaf7c93467933eea26c4"
+  integrity sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"

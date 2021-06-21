@@ -3,7 +3,7 @@ import * as path from 'path'
 import * as untildify from 'untildify'
 import { Injectable } from '@angular/core'
 import { ToastrService } from 'ngx-toastr'
-import { ElectronService } from 'terminus-core'
+import { PlatformService } from 'terminus-core'
 import { BaseTerminalTabComponent } from 'terminus-terminal'
 
 import { LinkHandler } from './api'
@@ -16,27 +16,29 @@ export class URLHandler extends LinkHandler {
 
     priority = 5
 
-    constructor (private electron: ElectronService) {
+    constructor (private platform: PlatformService) {
         super()
     }
 
     handle (uri: string) {
-        this.electron.shell.openExternal(`http://${uri}`)
+        this.platform.openExternal(`http://${uri}`)
     }
 }
 
 export class BaseFileHandler extends LinkHandler {
     constructor (
         protected toastr: ToastrService,
-        protected electron: ElectronService,
+        protected platform: PlatformService,
     ) {
         super()
     }
 
-    handle (uri: string) {
-        this.electron.shell.openExternal('file://' + uri).catch(err => {
+    async handle (uri: string) {
+        try {
+            await this.platform.openExternal('file://' + uri)
+        } catch (err) {
             this.toastr.error(err.toString())
-        })
+        }
     }
 
     async verify (uri: string): Promise<boolean> {
@@ -66,9 +68,9 @@ export class UnixFileHandler extends BaseFileHandler {
 
     constructor (
         protected toastr: ToastrService,
-        protected electron: ElectronService,
+        protected platform: PlatformService,
     ) {
-        super(toastr, electron)
+        super(toastr, platform)
     }
 }
 
@@ -80,9 +82,9 @@ export class WindowsFileHandler extends BaseFileHandler {
 
     constructor (
         protected toastr: ToastrService,
-        protected electron: ElectronService,
+        protected platform: PlatformService,
     ) {
-        super(toastr, electron)
+        super(toastr, platform)
     }
 
     convert (uri: string, tab?: BaseTerminalTabComponent): Promise<string> {
